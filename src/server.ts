@@ -35,7 +35,7 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
 
     //validating image_url query
     if (!image_url){
-      res.status(400).send('Oops, please provide image URL(Invalid URL)');
+      res.status(422).send('Oops, please provide image URL(Invalid URL)');
     } else {
 
       //call filterImageFromURL() and send resulting file as response
