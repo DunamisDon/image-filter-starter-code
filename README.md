@@ -13,7 +13,7 @@ This will get the project dependencies installed
 If dependants are successfully installed, no errors are likely to be seen here
 
 3. Type the url `localhost:8082/filteredimage` in your browser address bar
-`try GET /filteredimage?image_url={{}}` is displayed in your browser. Server is running well at this point
+`Oops, please provide image URL(Invalid URL)` is displayed in your browser. Server is running well at this point
 
 4. To filter an image type `http://localhost:8082/filteredimage?image_url=TheURLgoesHere`
 For example http://localhost:8082/filteredimage?image_url=https://cdn.pixabay.com/photo/2015/01/08/18/24/programming-593312_960_720.jpg will filter an image of a coder obtained from pixabay
