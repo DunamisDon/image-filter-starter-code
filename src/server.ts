@@ -29,6 +29,26 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
 
   /**************************************************************************** */
 
+  //BEGIN @TODO1
+  app.get( "/filteredimage", async(req:express.Request, res:express.Response) => {
+    let {image_url} = req.query;
+
+    //validating image_url query
+    if (!image_url){
+      res.status(400).send('Oops, please provide image URL(Invalid URL)');
+    } else {
+
+      //call filterImageFromURL() and send resulting file as response
+      await filterImageFromURL(image_url).then( function (image_filtered_path){
+        res.sendFile(image_filtered_path, () => {       
+          deleteLocalFiles([image_filtered_path]);//this part delete files off the server when done       
+        });   
+      }).catch(function(){
+        res.status(500).send('Image filtering failed. Make sure you are using a proper image URL');
+      });  
+
+    }
+  });
   //! END @TODO1
   
   // Root Endpoint
