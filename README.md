@@ -21,6 +21,10 @@ For example http://localhost:8082/filteredimage?image_url=https://cdn.pixabay.co
 
 
 ### Elastic Beanstalk URL for this project
+http://image-filter-starter-code-dev222222222222222222222.us-east-1.elasticbeanstalk.com/
+
+http://image-filter-starter-code-dev222222222222222222222.us-east-1.elasticbeanstalk.com/filteredimage?image_url=https://cdn.pixabay.com/photo/2015/01/08/18/24/programming-593312_960_720.jpg
+
 
 
 
